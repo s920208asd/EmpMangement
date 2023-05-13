@@ -1,0 +1,23 @@
+div {
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar-text {
+    margin-left: auto;
+    margin-right: 1rem;
+  }
+  .navbar-brand{
+    margin-left:1rem;
+  }
+  .div-btns{
+    margin-top: 1rem;
+}
+span#msg{
+  font-size: 14px;
+  color: red;
+}

@@ -18,7 +18,7 @@ public class LoginFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         String path = request.getRequestURI().substring(request.getContextPath().length());
         System.out.println(path);
-        if (path.startsWith("/users") &&!path.equals("/users/login")  && !path.equals("/users/register")) {
+        if (path.startsWith("/users") &&!path.equals("/users/login")  && !path.equals("/users/register") && !path.equals("/users/logout")) {
             String authorizationHeader = request.getHeader(HttpHeaders.AUTHORIZATION);
             if (authorizationHeader != null && authorizationHeader.startsWith("Bearer ")) {
                 String jwtContent = authorizationHeader.substring(7);

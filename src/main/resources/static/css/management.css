@@ -1,0 +1,52 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.card {
+  padding: 0%;
+}
+.btn-light {
+  border-color: #6e757726;
+}
+.btn-search {
+  position: relative;
+  z-index: 10;
+}
+.navbar-text {
+  margin-left: auto;
+  margin-right: 1rem;
+}
+.navbar-brand {
+  margin-left: 1rem;
+}
+.wrapper {
+  height: 100rem;
+}
+div.wrapper {
+  background-color: rgb(238 238 238 / 9%);
+}
+button.btn-ops {
+  color: white;
+  background-color: #00a8bd;
+}
+div.content-odd{
+  height: 3rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.558);
+}
+div.content-even{
+  background-color: #f8f8f8;
+  height: 3rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.558);
+}
+div.content-last{
+  border-bottom:0px;
+  height: 3rem;
+
+}
+i.btn-del, i.btn-edit{
+  cursor: pointer;
+}
+span#edit-msg ,#register-msg{
+  color: red;
+}

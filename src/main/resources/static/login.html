@@ -69,7 +69,7 @@
                       required
               />
             </div>
-            <span id="res">彎彎</span>
+            <span id="msg"></span>
             <div class="form-group div-btns">
               <button
                       type="button"
@@ -89,50 +89,8 @@
   </div>
 </div>
 <!--Js-->
-<!-- <script>
-  src = "./js/login.js";
-</script> -->
-<script>
-  window.onload = function () {
-    //相對路徑宣告
-    const baseUrl = window.location.protocol + "//" + window.location.host;
-    const contextPath = window.location.pathname.substring(
-            0,
-            window.location.pathname.indexOf("/", 1)
-    );
-    //api
-    const apiUsers = baseUrl + contextPath + "/users";
-    $("#login").click(function (e) {
-      e.preventDefault();
-      var myHeaders = new Headers();
-      myHeaders.append("Content-Type", "application/json");
-
-      var raw = JSON.stringify({
-        account: $("#account").val(),
-        password: $("#password").val(),
-      });
-
-      var requestOptions = {
-        method: "POST",
-        headers: myHeaders,
-        body: raw,
-      };
-
-      fetch("http://localhost:8080/users/login", requestOptions)
-              .then((response) => response.text())
-              .then((result) => {
-                if(result.includes("登入失敗")){
-                  $("res").text("");
-                  $("res").text(result);
-                } else{
-                  localStorage.setItem('token', result);
-                  location.href =baseUrl + contextPath +"/management.html"
-                  ;
-                }
-              })
-              .catch((error) => console.log("error", error));
-    });
-  };
+<script src="./js/login.js">
 </script>
+
 </body>
 </html>
